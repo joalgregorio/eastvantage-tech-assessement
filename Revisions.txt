@@ -1,0 +1,11 @@
+Revisions
+- Used prepared sql statements as a step to deter sql injections.
+- Implemented encapsulation by declaring variables only used internally by the classes as private.
+- Implemented dependency injections.
+- Enabled list method for comments to filter results by news Id to prevent negative performance impact and probable information leakage.
+- Used a config file instead of hardcoded database credentials. Would recommend that this is used for local development only. Use secrets on shared environments for better security.
+- Added error handling.
+- Made the following changes in the tables' DDL statments:
+    - used plural table names for uniformity and readability.
+    - setting NOW() as default value for created_at for both news and comments table.
+    - added foreign key in comments to enforce relationship between the news and comments table.
